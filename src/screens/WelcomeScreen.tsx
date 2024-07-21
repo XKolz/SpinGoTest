@@ -1,6 +1,6 @@
 // src/screens/WelcomeScreen.tsx
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Dimensions } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 
@@ -27,16 +27,6 @@ const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
     { id: 2, source: require('../../assets/welcome/welcome.png') },
     { id: 3, source: require('../../assets/welcome/welcome.png') },
   ];
-
-  const renderIndicator = (index: number) => {
-    return (
-      <TouchableOpacity
-        key={index}
-        style={[styles.indicator, activeIndex === index && styles.activeIndicator]}
-        onPress={() => setActiveIndex(index)}
-      />
-    );
-  };
 
   const barHeight = 8; // Adjust the height of the barline
   const barColor = '#00A6FB'; // Adjust the color of the barline
@@ -82,8 +72,6 @@ const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
           <TouchableOpacity style={styles.signupbutton} onPress={() => navigation.navigate('Register')}>
             <Text style={{ color: '#00A6FB', textAlign: 'center' }}>Sign up</Text>
           </TouchableOpacity>
-          {/* <Button title="Home" onPress={() => navigation.navigate('Home')} /> */}
-          {/* <Button title="Sign Up" /> */}
         </View>
       </View>
     </View>
