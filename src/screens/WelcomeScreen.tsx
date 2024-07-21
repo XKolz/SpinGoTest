@@ -56,7 +56,7 @@ const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={{ width: screenWidth }}>
-            <Image source={item.source} style={{ width: '100%', height: 500, }} />
+            <Image source={item.source} style={{ width: '100%', height: 400, }} />
           </View>
         )}
         onScroll={(event) => {
